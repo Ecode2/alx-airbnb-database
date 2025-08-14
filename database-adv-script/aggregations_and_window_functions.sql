@@ -13,3 +13,7 @@ WITH PropertyCounts AS (
 SELECT *,
     RANK() OVER (ORDER BY booking_count DESC) AS prop_rank
 FROM PropertyCounts;
+
+SELECT *,
+	ROW_NUMBER() OVER (ORDER BY booking_count DESC) AS prop_rank_no
+FROM PropertyCounts
