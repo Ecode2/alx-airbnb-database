@@ -1,4 +1,4 @@
-SELECT * FROM Bookings
+SELECT * FROM Bookings WHERE Bookings.user_id IS NOT NULL AND Bookings.property_id IS NOT NULL
 FULL JOIN Properties ON Bookings.property_id = Properties.id
 FULL JOIN Users ON Bookings.user_id = Users.id
 FULL JOIN Payments ON Payments.booking_id = Bookings.id

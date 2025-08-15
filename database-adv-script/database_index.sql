@@ -8,7 +8,7 @@ CREATE INDEX idx_property
 ON  Properties (title, location, price_per_night);
 
 
-EXPLAIN ANALYZE SELECT * FROM User WHERE email != NULL AND full_name != NULL;
+EXPLAIN ANALYZE SELECT * FROM User WHERE email IS NOT NULL AND full_name IS NOT NULL;
 
 EXPLAIN ANALYZE SELECT * FROM Bookings WHERE check_in_date >= '2023-01-01' AND check_out_date <= '2023-12-31';
 
